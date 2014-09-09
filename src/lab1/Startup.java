@@ -22,8 +22,8 @@ not have to be a GUI class.
 HumanResource employee = new HumanResource("Peter", "Piper", "392-333-1234",
     "03/27/1990");
     employee.goThroughOrientation();
-    employee.setMeetWithHr(true);
-    employee.setMeetDeptStaff(true);
+    employee.setMeetWithHr(false);
+    employee.setMeetDeptStaff(false);
     employee.setCubeId("141");
     }
 }
