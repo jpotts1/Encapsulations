@@ -9,27 +9,27 @@ package lab1;
  * @version     1.01
  */
 public class Startup {
-    public static void main(String[] args) {
-        /*
-            Are we violating SRP (Single Responsibility Principle)?
-        
-            HINT: think about what we are trying to do ... hire an employee.
-            Whose job is it to do this? The current class? Or, a new class?
-            Should we do the work here or delegate to the new class? You
-            may need to create a new class that talks to Employee. This does
-            not have to be a GUI class.
-        */
-        Employee employee = new Employee();
-        employee.firstName = "Peter";
-        employee.lastName = "Piper";
-        employee.ssn = "333-1234";
-        
-        employee.meetDepartmentStaff();
-        employee.meetWithHrForBenefitAndSalryInfo();
-        employee.reviewDeptPolicies();
-
-        System.out.println("The employee's status is: " + employee.getStatus());
+public static void main(String[] args) {
+/*
+Are we violating SRP (Single Responsibility Principle)?
+HINT: think about what we are trying to do ... hire an employee.
+Whose job is it to do this? The current class? Or, a new class?
+Should we do the work here or delegate to the new class? You
+may need to create a new class that talks to Employee. This does
+not have to be a GUI class.
+*/
+//    
+HumanResource employee = new HumanResource("Peter", "Piper", "392-333-1234",
+    "03/27/1990");
+    employee.goThroughOrientation();
+    employee.setMeetWithHr(true);
+    employee.setMeetDeptStaff(true);
+    employee.setCubeId("141");
     }
-    
-    
 }
+
+
+
+
+
+
